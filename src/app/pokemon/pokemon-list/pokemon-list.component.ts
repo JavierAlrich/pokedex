@@ -23,12 +23,12 @@ export class PokemonListComponent implements OnInit {
   }
 
   nextPage(){
-    this.page += 5;
+    this.page += 10;
   }
 
   previousPage(){
     if(this.page > 0){
-      this.page -= 5;
+      this.page -= 10;
     }
   }
 

@@ -9,11 +9,11 @@ export class FiltroPipe implements PipeTransform {
 
   transform(pokemons: Pokemon[], page: number = 0, search: string = ''): Pokemon[] {
     if(search.length === 0){
-      return pokemons.slice(page, page + 5);
+      return pokemons.slice(page, page + 10);
     }
 
     const filteredPokemons = pokemons.filter(poke => poke.name.includes(search));
-    return filteredPokemons.slice(page, page + 5);
+    return filteredPokemons.slice(page, page + 10);
   }
 
 }

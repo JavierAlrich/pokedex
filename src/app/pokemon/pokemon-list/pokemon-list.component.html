@@ -1,0 +1,34 @@
+<h2>Pokedex</h2>
+
+<div class="searchPokemon">
+    <input type="text" placeholder="Buscar Pokemon" (keyup)="onSearchPokemon(pokemonSearch.value)" #pokemonSearch>
+</div>
+
+<div class="paginacion">
+    <button 
+        (click)="previousPage()">
+        Anteriores
+    </button>
+    <button 
+        (click)="nextPage()"
+        [disabled]="(pokemons | filtro:page:searchPoke).length === 0">
+        Siguientes
+    </button>
+</div>
+<div class="clear"></div>
+
+<div class="pokeCard" *ngFor="let pokemon of pokemons | filtro:page:searchPoke">
+    <div class="pokeimg">
+        <img src="{{pokemon.pic}}" alt="{{pokemon.name}}">
+    </div>
+    <div class="pokecardInfo">
+        <div class="pokename">
+            <p>{{pokemon.name}}</p>
+        </div>
+        <div class="pokenumber">
+            <p>{{pokemon.id}}</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div>

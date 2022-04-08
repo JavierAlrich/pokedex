@@ -1,1 +1,138 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'title';
+    src: url('./assets/fonts/pokemonFont/Pokemon_Solid.ttf');
+}
+
+body{
+    background: #f9f9f9;
+}
+
+h2{
+    font-family: 'title';
+    text-align: center;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 5px;
+    color: #ffcb05;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #3565ae;
+    text-shadow: 5px 4px 6px rgba(0, 0, 0, 0.5);
+    margin: 0px 0px 60px 0px;
+    padding: 5px 0px;
+}
+
+.clear{
+    clear: both;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+.pokeCard{
+    float: left;
+    width: calc(20% - 42px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    /* background: linear-gradient(135deg, rgba(247,27,27,1) 0%, rgba(150,11,11,1) 100%); */
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 0px 0px 7px rgb(0, 0, 0, 25%);
+    border-bottom: 7px solid #f71b1b;
+}
+
+.pokeimg{
+    background-color: #eee;
+    box-shadow: inset 0px 0px 7px rgb(0, 0, 0, 25%);
+    border-radius: 10px 0px 0px 0px;
+}
+
+.pokeCard img{
+    width: 100%;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.7));
+}
+
+.pokecardInfo{
+    margin: 15px 0px;
+    background: #eee;
+    padding: 10px 0px;
+    box-shadow: inset 0px 0px 7px rgb(0, 0, 0, 25%);
+    border-radius: 0px 0px 10px 0px;
+}
+
+.pokename{
+    float: left;
+    width: calc(65% - 17px);
+    padding: 8px 10px 8px 5px;
+    border-right: 1px solid #ccc;
+}
+
+.pokenumber{
+    float: right;
+    width: calc(35% - 16px);
+    padding: 8px;
+}
+
+.pokename p, .pokenumber p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3565ae;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.paginacion{
+    float: right;
+    margin-bottom: 20px;
+}
+
+.paginacion button{
+    margin-right: 15px;
+    background-color: #c12828;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid #570c0c;
+    border-radius: 10px 0px 10px 0px;
+    cursor: pointer;
+}
+
+.searchPokemon input[type=text]{
+    float: left;
+    min-width: 500px;
+    margin-left: 10px;
+    padding: 8px 8px 8px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.searchPokemon input[type=text]:disabled {
+    background: #ccc;
+    color:#570c0c;
+  }
+
+/* ============================ Inicia versión responsiva ============================ */
+
+@media (min-width: 680px) and (max-width: 900px){
+    .pokeCard{
+        width: calc(25% - 42px);
+    }
+}
+
+@media (min-width: 380px) and (max-width: 680px){
+    .pokeCard{
+        width: calc(50% - 42px);
+    }
+}
+
+@media (min-width: 0px) and (max-width: 380px){
+    .pokeCard{
+        width: calc(100% - 42px);
+    }
+}
